@@ -1,0 +1,23 @@
+{
+    "name": "FB Image Downloader",
+    "description": "This extension downloads all your image in one click! Click on the extension icon to download images",
+    "version": "1.0",
+    "manifest_version": 2,
+  
+    "content_scripts":[
+        {
+            "matches":[
+                "<all_urls>"
+            ],
+            "js":["content.js"]
+        }
+    ], "browser_action": {
+    },
+    "background": {
+        "scripts": ["background.js","click.js"]
+     },
+    
+    "permissions": ["storage","background","downloads"] 
+   
+    
+}
