@@ -1,0 +1,23 @@
+{
+    "name": "FB Image Downloader using popup",
+    "description": "This extension downloads all your image in one click!",
+    "version": "1.0",
+    "manifest_version": 2,
+    "content_scripts":[
+        {
+            "matches":[
+                "https://www.facebook.com/*"
+            ],
+            "js":["content.js"]
+        }
+    ],
+    "background": {
+        "scripts": ["background.js"]
+     },
+     "browser_action": {
+         "default_popup":"popup.html"
+    },
+    "permissions": ["tabs","storage","background","downloads"] 
+   
+    
+}
