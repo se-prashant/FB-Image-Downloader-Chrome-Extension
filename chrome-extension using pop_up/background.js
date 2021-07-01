@@ -1,6 +1,7 @@
 chrome.runtime.onMessage.addListener(
     function (arg, sender, sendResponse) {
         var args = arg.collection;
+        //args contains array of image_urls
         for (let i =0 ;i<args.length;i++) {
             var img_url = args[i];
             file_name = "img_"+i.toString();
